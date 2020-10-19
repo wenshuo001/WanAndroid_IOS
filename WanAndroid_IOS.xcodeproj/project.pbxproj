@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ACB01C3CD2DD2F8F6348B97 /* libPods-WanAndroid_IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71A04AA7383E0E9DB5643A /* libPods-WanAndroid_IOS.a */; };
+		707509A3251F37A2006C1AEA /* GTNotifitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 707509A2251F37A2006C1AEA /* GTNotifitionManager.m */; };
+		EA51A13A25344A030003A0CC /* BaseNavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13025344A030003A0CC /* BaseNavigationController+Extension.m */; };
+		EA51A13B25344A030003A0CC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13325344A030003A0CC /* BaseViewController.m */; };
+		EA51A13C25344A030003A0CC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13525344A030003A0CC /* BaseNavigationController.m */; };
+		EA51A13D25344A030003A0CC /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13625344A030003A0CC /* BaseTabBar.m */; };
+		EA51A13E25344A030003A0CC /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13825344A030003A0CC /* BaseTabBarController.m */; };
+		EA51A14025344B080003A0CC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13F25344B080003A0CC /* BaseViewController.m */; };
+		EA51A15125344BBA0003A0CC /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A14425344BBA0003A0CC /* UIColor+HEX.m */; };
+		EA51A15225344BBA0003A0CC /* NSString+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A14725344BBA0003A0CC /* NSString+Calculation.m */; };
+		EA51A15325344BBA0003A0CC /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A14A25344BBA0003A0CC /* UIView+BlockGesture.m */; };
+		EA51A15425344BBA0003A0CC /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A14D25344BBA0003A0CC /* UIFont+Extension.m */; };
+		EA51A15525344BBA0003A0CC /* UIView+BorderLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A14F25344BBA0003A0CC /* UIView+BorderLine.m */; };
+		EA51A15625344BBA0003A0CC /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A15025344BBA0003A0CC /* GTScreen.m */; };
+		EA51A15A253454C40003A0CC /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A158253454C40003A0CC /* NSObject+NSCoding.m */; };
+		EA51A16E2534580A0003A0CC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A16A2534580A0003A0CC /* NSString+Extension.m */; };
+		EA51A16F2534580A0003A0CC /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A16B2534580A0003A0CC /* NSString+Encryption.m */; };
+		EA51A1702534580A0003A0CC /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A16C2534580A0003A0CC /* NSAttributedString+Extension.m */; };
+		EA656721250D213E00F1C5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA656720250D213E00F1C5D3 /* AppDelegate.m */; };
+		EA656724250D213E00F1C5D3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA656723250D213E00F1C5D3 /* SceneDelegate.m */; };
+		EA656727250D213E00F1C5D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA656726250D213E00F1C5D3 /* ViewController.m */; };
+		EA65672A250D213E00F1C5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA656728250D213E00F1C5D3 /* Main.storyboard */; };
+		EA65672C250D214100F1C5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA65672B250D214100F1C5D3 /* Assets.xcassets */; };
+		EA65672F250D214100F1C5D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA65672D250D214100F1C5D3 /* LaunchScreen.storyboard */; };
+		EA656732250D214100F1C5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA656731250D214100F1C5D3 /* main.m */; };
+		EAC0CA35250E607B00D80D3B /* GankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC0CA34250E607B00D80D3B /* GankViewController.m */; };
+		EAC0CA39250E60A000D80D3B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC0CA38250E60A000D80D3B /* MainViewController.m */; };
+		EAC0CA3E250E622D00D80D3B /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC0CA3D250E622D00D80D3B /* CenterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20B5C5D2C669EF65E5AAB867 /* Pods-WanAndroid_IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid_IOS.release.xcconfig"; path = "Target Support Files/Pods-WanAndroid_IOS/Pods-WanAndroid_IOS.release.xcconfig"; sourceTree = "<group>"; };
+		707509A1251F37A2006C1AEA /* GTNotifitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotifitionManager.h; sourceTree = "<group>"; };
+		707509A2251F37A2006C1AEA /* GTNotifitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotifitionManager.m; sourceTree = "<group>"; };
+		9A71A04AA7383E0E9DB5643A /* libPods-WanAndroid_IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WanAndroid_IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA51A13025344A030003A0CC /* BaseNavigationController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseNavigationController+Extension.m"; sourceTree = "<group>"; };
+		EA51A13125344A030003A0CC /* BaseNavigationController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseNavigationController+Extension.h"; sourceTree = "<group>"; };
+		EA51A13225344A030003A0CC /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
+		EA51A13325344A030003A0CC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EA51A13425344A030003A0CC /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		EA51A13525344A030003A0CC /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		EA51A13625344A030003A0CC /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		EA51A13725344A030003A0CC /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		EA51A13825344A030003A0CC /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		EA51A13925344A030003A0CC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EA51A13F25344B080003A0CC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EA51A14325344B5F0003A0CC /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EA51A14425344BBA0003A0CC /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
+		EA51A14625344BBA0003A0CC /* NSString+Calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Calculation.h"; sourceTree = "<group>"; };
+		EA51A14725344BBA0003A0CC /* NSString+Calculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Calculation.m"; sourceTree = "<group>"; };
+		EA51A14825344BBA0003A0CC /* GTScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		EA51A14925344BBA0003A0CC /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
+		EA51A14A25344BBA0003A0CC /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
+		EA51A14B25344BBA0003A0CC /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		EA51A14C25344BBA0003A0CC /* UIFont+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
+		EA51A14D25344BBA0003A0CC /* UIFont+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
+		EA51A14E25344BBA0003A0CC /* UIView+BorderLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderLine.h"; sourceTree = "<group>"; };
+		EA51A14F25344BBA0003A0CC /* UIView+BorderLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderLine.m"; sourceTree = "<group>"; };
+		EA51A15025344BBA0003A0CC /* GTScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
+		EA51A158253454C40003A0CC /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		EA51A159253454C40003A0CC /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
+		EA51A1682534580A0003A0CC /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		EA51A1692534580A0003A0CC /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		EA51A16A2534580A0003A0CC /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		EA51A16B2534580A0003A0CC /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		EA51A16C2534580A0003A0CC /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		EA51A16D2534580A0003A0CC /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		EA65671C250D213E00F1C5D3 /* WanAndroid_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroid_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA65671F250D213E00F1C5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA656720250D213E00F1C5D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA656722250D213E00F1C5D3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EA656723250D213E00F1C5D3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EA656725250D213E00F1C5D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA656726250D213E00F1C5D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA656729250D213E00F1C5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA65672B250D214100F1C5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA65672E250D214100F1C5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA656730250D214100F1C5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA656731250D214100F1C5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAC0CA33250E607B00D80D3B /* GankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GankViewController.h; sourceTree = "<group>"; };
+		EAC0CA34250E607B00D80D3B /* GankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GankViewController.m; sourceTree = "<group>"; };
+		EAC0CA37250E60A000D80D3B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EAC0CA38250E60A000D80D3B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EAC0CA3C250E622D00D80D3B /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		EAC0CA3D250E622D00D80D3B /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		EF76E54B8159CBF2705A80C7 /* Pods-WanAndroid_IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid_IOS.debug.xcconfig"; path = "Target Support Files/Pods-WanAndroid_IOS/Pods-WanAndroid_IOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA656719250D213E00F1C5D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACB01C3CD2DD2F8F6348B97 /* libPods-WanAndroid_IOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AEAEC1A71FC4288A055CD34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A71A04AA7383E0E9DB5643A /* libPods-WanAndroid_IOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707509A0251F377B006C1AEA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A157253454C40003A0CC /* NSObject */,
+				EA51A14525344BBA0003A0CC /* NSString */,
+				707509A1251F37A2006C1AEA /* GTNotifitionManager.h */,
+				707509A2251F37A2006C1AEA /* GTNotifitionManager.m */,
+				EA51A14825344BBA0003A0CC /* GTScreen.h */,
+				EA51A15025344BBA0003A0CC /* GTScreen.m */,
+				EA51A14B25344BBA0003A0CC /* UIColor+HEX.h */,
+				EA51A14425344BBA0003A0CC /* UIColor+HEX.m */,
+				EA51A14C25344BBA0003A0CC /* UIFont+Extension.h */,
+				EA51A14D25344BBA0003A0CC /* UIFont+Extension.m */,
+				EA51A14925344BBA0003A0CC /* UIView+BlockGesture.h */,
+				EA51A14A25344BBA0003A0CC /* UIView+BlockGesture.m */,
+				EA51A14E25344BBA0003A0CC /* UIView+BorderLine.h */,
+				EA51A14F25344BBA0003A0CC /* UIView+BorderLine.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A9213C1FCD3BD9A622719A09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF76E54B8159CBF2705A80C7 /* Pods-WanAndroid_IOS.debug.xcconfig */,
+				20B5C5D2C669EF65E5AAB867 /* Pods-WanAndroid_IOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA51A12E25344A030003A0CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A12F25344A030003A0CC /* BaseNavigationController */,
+				EA51A13225344A030003A0CC /* BaseTabBar.h */,
+				EA51A13625344A030003A0CC /* BaseTabBar.m */,
+				EA51A14325344B5F0003A0CC /* BaseViewController.h */,
+				EA51A13325344A030003A0CC /* BaseViewController.m */,
+				EA51A13425344A030003A0CC /* BaseTabBarController.h */,
+				EA51A13825344A030003A0CC /* BaseTabBarController.m */,
+				EA51A13725344A030003A0CC /* BaseNavigationController.h */,
+				EA51A13525344A030003A0CC /* BaseNavigationController.m */,
+				EA51A13925344A030003A0CC /* BaseViewController.h */,
+				EA51A13F25344B080003A0CC /* BaseViewController.m */,
+			);
+			name = Base;
+			path = WanAndroid_IOS/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA51A12F25344A030003A0CC /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A13125344A030003A0CC /* BaseNavigationController+Extension.h */,
+				EA51A13025344A030003A0CC /* BaseNavigationController+Extension.m */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		EA51A14525344BBA0003A0CC /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A16D2534580A0003A0CC /* NSAttributedString+Extension.h */,
+				EA51A16C2534580A0003A0CC /* NSAttributedString+Extension.m */,
+				EA51A1682534580A0003A0CC /* NSString+Encryption.h */,
+				EA51A16B2534580A0003A0CC /* NSString+Encryption.m */,
+				EA51A1692534580A0003A0CC /* NSString+Extension.h */,
+				EA51A16A2534580A0003A0CC /* NSString+Extension.m */,
+				EA51A14625344BBA0003A0CC /* NSString+Calculation.h */,
+				EA51A14725344BBA0003A0CC /* NSString+Calculation.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		EA51A157253454C40003A0CC /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A159253454C40003A0CC /* NSObject+NSCoding.h */,
+				EA51A158253454C40003A0CC /* NSObject+NSCoding.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		EA656713250D213E00F1C5D3 = {
+			isa = PBXGroup;
+			children = (
+				EA65671E250D213E00F1C5D3 /* WanAndroid_IOS */,
+				EA65671D250D213E00F1C5D3 /* Products */,
+				A9213C1FCD3BD9A622719A09 /* Pods */,
+				5AEAEC1A71FC4288A055CD34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA65671D250D213E00F1C5D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA65671C250D213E00F1C5D3 /* WanAndroid_IOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA65671E250D213E00F1C5D3 /* WanAndroid_IOS */ = {
+			isa = PBXGroup;
+			children = (
+				EA51A12E25344A030003A0CC /* Base */,
+				707509A0251F377B006C1AEA /* Utils */,
+				EAC0CA3A250E620900D80D3B /* CenterController */,
+				EAC0CA31250E5DC800D80D3B /* GankIOController */,
+				EAC0CA30250E5DA200D80D3B /* MainController */,
+				EA65671F250D213E00F1C5D3 /* AppDelegate.h */,
+				EA656720250D213E00F1C5D3 /* AppDelegate.m */,
+				EA656722250D213E00F1C5D3 /* SceneDelegate.h */,
+				EA656723250D213E00F1C5D3 /* SceneDelegate.m */,
+				EA656725250D213E00F1C5D3 /* ViewController.h */,
+				EA656726250D213E00F1C5D3 /* ViewController.m */,
+				EA656728250D213E00F1C5D3 /* Main.storyboard */,
+				EA65672B250D214100F1C5D3 /* Assets.xcassets */,
+				EA65672D250D214100F1C5D3 /* LaunchScreen.storyboard */,
+				EA656730250D214100F1C5D3 /* Info.plist */,
+				EA656731250D214100F1C5D3 /* main.m */,
+			);
+			path = WanAndroid_IOS;
+			sourceTree = "<group>";
+		};
+		EAC0CA30250E5DA200D80D3B /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA36250E608B00D80D3B /* Controller */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		EAC0CA31250E5DC800D80D3B /* GankIOController */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA32250E605100D80D3B /* Controller */,
+			);
+			path = GankIOController;
+			sourceTree = "<group>";
+		};
+		EAC0CA32250E605100D80D3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA33250E607B00D80D3B /* GankViewController.h */,
+				EAC0CA34250E607B00D80D3B /* GankViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EAC0CA36250E608B00D80D3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA37250E60A000D80D3B /* MainViewController.h */,
+				EAC0CA38250E60A000D80D3B /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EAC0CA3A250E620900D80D3B /* CenterController */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA3B250E621900D80D3B /* Controller */,
+			);
+			path = CenterController;
+			sourceTree = "<group>";
+		};
+		EAC0CA3B250E621900D80D3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAC0CA3C250E622D00D80D3B /* CenterViewController.h */,
+				EAC0CA3D250E622D00D80D3B /* CenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA65671B250D213E00F1C5D3 /* WanAndroid_IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA656735250D214100F1C5D3 /* Build configuration list for PBXNativeTarget "WanAndroid_IOS" */;
+			buildPhases = (
+				62569DFA19398C78914A5C24 /* [CP] Check Pods Manifest.lock */,
+				EA656718250D213E00F1C5D3 /* Sources */,
+				EA656719250D213E00F1C5D3 /* Frameworks */,
+				EA65671A250D213E00F1C5D3 /* Resources */,
+				6794EEF84A5821894D7D1318 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WanAndroid_IOS;
+			productName = WanAndroid_IOS;
+			productReference = EA65671C250D213E00F1C5D3 /* WanAndroid_IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA656714250D213E00F1C5D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = kuzima;
+				TargetAttributes = {
+					EA65671B250D213E00F1C5D3 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = EA656717250D213E00F1C5D3 /* Build configuration list for PBXProject "WanAndroid_IOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA656713250D213E00F1C5D3;
+			productRefGroup = EA65671D250D213E00F1C5D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA65671B250D213E00F1C5D3 /* WanAndroid_IOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA65671A250D213E00F1C5D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA65672F250D214100F1C5D3 /* LaunchScreen.storyboard in Resources */,
+				EA65672C250D214100F1C5D3 /* Assets.xcassets in Resources */,
+				EA65672A250D213E00F1C5D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62569DFA19398C78914A5C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WanAndroid_IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6794EEF84A5821894D7D1318 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroid_IOS/Pods-WanAndroid_IOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroid_IOS/Pods-WanAndroid_IOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WanAndroid_IOS/Pods-WanAndroid_IOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA656718250D213E00F1C5D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA51A15625344BBA0003A0CC /* GTScreen.m in Sources */,
+				EA51A13A25344A030003A0CC /* BaseNavigationController+Extension.m in Sources */,
+				EA51A13C25344A030003A0CC /* BaseNavigationController.m in Sources */,
+				EA51A13B25344A030003A0CC /* BaseViewController.m in Sources */,
+				EA51A15325344BBA0003A0CC /* UIView+BlockGesture.m in Sources */,
+				EA51A15225344BBA0003A0CC /* NSString+Calculation.m in Sources */,
+				EA51A15A253454C40003A0CC /* NSObject+NSCoding.m in Sources */,
+				EA656727250D213E00F1C5D3 /* ViewController.m in Sources */,
+				EA51A16F2534580A0003A0CC /* NSString+Encryption.m in Sources */,
+				EA51A15125344BBA0003A0CC /* UIColor+HEX.m in Sources */,
+				707509A3251F37A2006C1AEA /* GTNotifitionManager.m in Sources */,
+				EA51A14025344B080003A0CC /* BaseViewController.m in Sources */,
+				EAC0CA39250E60A000D80D3B /* MainViewController.m in Sources */,
+				EA51A13D25344A030003A0CC /* BaseTabBar.m in Sources */,
+				EA51A1702534580A0003A0CC /* NSAttributedString+Extension.m in Sources */,
+				EA656721250D213E00F1C5D3 /* AppDelegate.m in Sources */,
+				EA656732250D214100F1C5D3 /* main.m in Sources */,
+				EA51A13E25344A030003A0CC /* BaseTabBarController.m in Sources */,
+				EA51A16E2534580A0003A0CC /* NSString+Extension.m in Sources */,
+				EA51A15425344BBA0003A0CC /* UIFont+Extension.m in Sources */,
+				EA656724250D213E00F1C5D3 /* SceneDelegate.m in Sources */,
+				EA51A15525344BBA0003A0CC /* UIView+BorderLine.m in Sources */,
+				EAC0CA35250E607B00D80D3B /* GankViewController.m in Sources */,
+				EAC0CA3E250E622D00D80D3B /* CenterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA656728250D213E00F1C5D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA656729250D213E00F1C5D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA65672D250D214100F1C5D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA65672E250D214100F1C5D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA656733250D214100F1C5D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA656734250D214100F1C5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA656736250D214100F1C5D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF76E54B8159CBF2705A80C7 /* Pods-WanAndroid_IOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GS6PH9CX4W;
+				INFOPLIST_FILE = WanAndroid_IOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ws.WanAndroid-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA656737250D214100F1C5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20B5C5D2C669EF65E5AAB867 /* Pods-WanAndroid_IOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GS6PH9CX4W;
+				INFOPLIST_FILE = WanAndroid_IOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ws.WanAndroid-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA656717250D213E00F1C5D3 /* Build configuration list for PBXProject "WanAndroid_IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA656733250D214100F1C5D3 /* Debug */,
+				EA656734250D214100F1C5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA656735250D214100F1C5D3 /* Build configuration list for PBXNativeTarget "WanAndroid_IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA656736250D214100F1C5D3 /* Debug */,
+				EA656737250D214100F1C5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA656714250D213E00F1C5D3 /* Project object */;
+}
