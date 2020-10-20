@@ -33,7 +33,9 @@ static char kActionHandlerLongPressGestureKey;
 {
     // 禁止点击0.1秒
     UIView *view = gesture.view;
+    //决定UIView是否接受并响应用户的交互。 NO是不交互 YES是交互
     view.userInteractionEnabled = NO;
+    // 延迟执行
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         view.userInteractionEnabled = YES;
     });

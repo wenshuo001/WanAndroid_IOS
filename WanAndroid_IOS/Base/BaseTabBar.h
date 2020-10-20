@@ -15,7 +15,7 @@ typedef void (^BaseTabBarClick)(NSInteger index);
 
 @interface BaseTabBar : UITabBar
 @property (nonatomic, assign) NSInteger index;
-@property (nonatomic, copy  ) BaseTabBarClick click;
+@property (nonatomic, copy) BaseTabBarClick click;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,25 +8,16 @@
 #import <UserNotifications/UserNotifications.h>
 #import "MainViewController.h"
 #import "GTNotifitionManager.h"
-
-
+#import "UINavigationController+JZExtension.h"
+#import "JZNavigationExtension.h"
+ 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.tabBarItem.title = @"新闻";
-        self.tabBarItem.image = [UIImage imageNamed:@"首页1-1"];
-        self.tabBarItem.selectedImage = [UIImage imageNamed:@"首页1"];
-        self.navigationController.navigationBar.hidden = YES; 
-    }
-    return self;
-}
+ 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +25,7 @@
     //使用GCD获取一个非主线程的线程用于发送通知
     [GTNotifitionManager.notificationManager checkNotificationAuthorization];
  //   [self addLocalNotice];
-  
+    self.navigationController.jz_navigationBarHidden = true; //隐藏标题栏和状态栏
 }
 
 
@@ -48,7 +39,7 @@
         // 内容
         content.body = @"测试通知的具体内容";
         // 声音
-       // 默认声音
+        // 默认声音
      //    content.sound = [UNNotificationSound defaultSound];
      // 添加自定义声音
        content.sound = [UNNotificationSound soundNamed:@"Alert_ActivityGoalAttained_Salient_Haptic.caf"];

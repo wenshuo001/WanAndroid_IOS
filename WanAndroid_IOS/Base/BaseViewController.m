@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, BarButtonItemState) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self.navigationController setJz_navigationBarTransitionStyle:JZNavigationBarTransitionStyleSystem];
     [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
     [self.view setBackgroundColor:kColor_BG];
