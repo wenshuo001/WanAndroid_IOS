@@ -10,25 +10,120 @@
 #import "GTNotifitionManager.h"
 #import "UINavigationController+JZExtension.h"
 #import "JZNavigationExtension.h"
+#import <UIKit/UIKit.h>
+#import "MJRefresh.h"
+#import "BannerCell.h"
+#import "AFHTTPSessionManager.h"
  
-@interface MainViewController ()
+ 
+#import <objc/message.h>
+ 
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
+//页面内容table
+@property (nonatomic, strong) UITableView *newsTableView;
 
+ 
 @end
 
 @implementation MainViewController
 
- 
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //使用GCD获取一个非主线程的线程用于发送通知
     [GTNotifitionManager.notificationManager checkNotificationAuthorization];
- //   [self addLocalNotice];
+    //   [self addLocalNotice];
     self.navigationController.jz_navigationBarHidden = true; //隐藏标题栏和状态栏
+    
+    [[AFHTTPSessionManager manager] GET:@"https://wanandroid.com/wxarticle/chapters/json" parameters:nil  headers:nil  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"");
+    }];
+    [self setupView];
 }
 
+-(void) setupView{
+    if (NSFoundationVersionNumber>=NSFoundationVersionNumber_iOS_8_0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
 
+        self.extendedLayoutIncludesOpaqueBars = NO;
+
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    }
+    //初始化TableView
+    UITableView *news = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    news.delegate = self;
+    news.dataSource = self;
+    news.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:news];
+    //设置 cell 的分割线
+    news.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.newsTableView = news;
+    
+    //初始化下拉刷新
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    __weak __typeof(self) weakSelf = self;
+    self.newsTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //进行数据刷新操作
+    }];
+    
+    //初始化上拉加载
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    self.newsTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+         
+    }];
+}
+
+#pragma mark - UItableView
+
+//设置表格视图有多少行
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 10;
+}
+
+// 设置有几组
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+// 设置行高
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0)
+    {
+        return 200;
+    }
+    return 100;
+}
+
+//设置 cell 视图
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    if (indexPath.row == 0)
+    {
+       // AdsModel *model = [self.adsData objectAtIndex:0];
+        BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"banner"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    UITableViewCell * cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    }
+    
+    cell.textLabel.text = @"主标题";
+    cell.detailTextLabel.text = @"副标题";
+
+    return cell;
+}
+
+#pragma mark - 发送通知
 - (void)addLocalNotice {
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -40,26 +135,26 @@
         content.body = @"测试通知的具体内容";
         // 声音
         // 默认声音
-     //    content.sound = [UNNotificationSound defaultSound];
-     // 添加自定义声音
-       content.sound = [UNNotificationSound soundNamed:@"Alert_ActivityGoalAttained_Salient_Haptic.caf"];
+        //    content.sound = [UNNotificationSound defaultSound];
+        // 添加自定义声音
+        content.sound = [UNNotificationSound soundNamed:@"Alert_ActivityGoalAttained_Salient_Haptic.caf"];
         // 角标 （我这里测试的角标无效，暂时没找到原因）
         content.badge = @1;
         // 多少秒后发送,可以将固定的日期转化为时间
         NSTimeInterval time = [[NSDate dateWithTimeIntervalSinceNow:10] timeIntervalSinceNow];
-//        NSTimeInterval time = 10;
+        //        NSTimeInterval time = 10;
         // repeats，是否重复，如果重复的话时间必须大于60s，要不会报错
         UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:time repeats:NO];
         
         /*
-        //如果想重复可以使用这个,按日期
-        // 周一早上 8：00 上班
-        NSDateComponents *components = [[NSDateComponents alloc] init];
-        // 注意，weekday默认是从周日开始
-        components.weekday = 2;
-        components.hour = 8;
-        UNCalendarNotificationTrigger *calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:components repeats:YES];
-        */
+         //如果想重复可以使用这个,按日期
+         // 周一早上 8：00 上班
+         NSDateComponents *components = [[NSDateComponents alloc] init];
+         // 注意，weekday默认是从周日开始
+         components.weekday = 2;
+         components.hour = 8;
+         UNCalendarNotificationTrigger *calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:components repeats:YES];
+         */
         // 添加通知的标识符，可以用于移除，更新等操作
         NSString *identifier = @"noticeId";
         UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:identifier content:content trigger:trigger];
@@ -85,14 +180,6 @@
         [[UIApplication sharedApplication] scheduleLocalNotification:notif];
     }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

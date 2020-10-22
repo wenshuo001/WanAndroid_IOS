@@ -11,4 +11,5 @@ target 'WanAndroid_IOS' do
   pod 'MJRefresh'
   pod 'JZNavigationExtension', '2.1'
   pod 'JGProgressHUD', '2.0.3'
+ pod 'SDCycleScrollView'
 end
