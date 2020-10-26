@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0ACB01C3CD2DD2F8F6348B97 /* libPods-WanAndroid_IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71A04AA7383E0E9DB5643A /* libPods-WanAndroid_IOS.a */; };
 		707509A3251F37A2006C1AEA /* GTNotifitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 707509A2251F37A2006C1AEA /* GTNotifitionManager.m */; };
+		EA47730D25419BA70024876F /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA47730B25419BA70024876F /* BannerCell.m */; };
+		EA49444B2543D21600825C33 /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49444A2543D21600825C33 /* BannerModel.m */; };
+		EA4944502543D2EF00825C33 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49444F2543D2EF00825C33 /* BaseModel.m */; };
+		EA4944532543D9BE00825C33 /* V1_BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4944522543D9BE00825C33 /* V1_BannerModel.m */; };
+		EA49445725448E0D00825C33 /* NetServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49445625448E0D00825C33 /* NetServiceTool.m */; };
+		EA49445A2544961D00825C33 /* WeChatChaptersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4944592544961D00825C33 /* WeChatChaptersModel.m */; };
+		EA49445D2544964100825C33 /* WeChatChapters_V1Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49445C2544964100825C33 /* WeChatChapters_V1Model.m */; };
 		EA51A13A25344A030003A0CC /* BaseNavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13025344A030003A0CC /* BaseNavigationController+Extension.m */; };
 		EA51A13B25344A030003A0CC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13325344A030003A0CC /* BaseViewController.m */; };
 		EA51A13C25344A030003A0CC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA51A13525344A030003A0CC /* BaseNavigationController.m */; };
@@ -42,6 +49,20 @@
 		707509A1251F37A2006C1AEA /* GTNotifitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotifitionManager.h; sourceTree = "<group>"; };
 		707509A2251F37A2006C1AEA /* GTNotifitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotifitionManager.m; sourceTree = "<group>"; };
 		9A71A04AA7383E0E9DB5643A /* libPods-WanAndroid_IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WanAndroid_IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA47730B25419BA70024876F /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		EA47730C25419BA70024876F /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		EA4944492543D21600825C33 /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
+		EA49444A2543D21600825C33 /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
+		EA49444E2543D2EF00825C33 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		EA49444F2543D2EF00825C33 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		EA4944512543D9BE00825C33 /* V1_BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = V1_BannerModel.h; sourceTree = "<group>"; };
+		EA4944522543D9BE00825C33 /* V1_BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = V1_BannerModel.m; sourceTree = "<group>"; };
+		EA49445525448E0D00825C33 /* NetServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetServiceTool.h; sourceTree = "<group>"; };
+		EA49445625448E0D00825C33 /* NetServiceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetServiceTool.m; sourceTree = "<group>"; };
+		EA4944582544961D00825C33 /* WeChatChaptersModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChaptersModel.h; sourceTree = "<group>"; };
+		EA4944592544961D00825C33 /* WeChatChaptersModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChaptersModel.m; sourceTree = "<group>"; };
+		EA49445B2544964100825C33 /* WeChatChapters_V1Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChapters_V1Model.h; sourceTree = "<group>"; };
+		EA49445C2544964100825C33 /* WeChatChapters_V1Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChapters_V1Model.m; sourceTree = "<group>"; };
 		EA51A13025344A030003A0CC /* BaseNavigationController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseNavigationController+Extension.m"; sourceTree = "<group>"; };
 		EA51A13125344A030003A0CC /* BaseNavigationController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseNavigationController+Extension.h"; sourceTree = "<group>"; };
 		EA51A13225344A030003A0CC /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
@@ -145,10 +166,53 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA47730A25419BA70024876F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EA47730C25419BA70024876F /* BannerCell.h */,
+				EA47730B25419BA70024876F /* BannerCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EA4944482543D1E900825C33 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4944492543D21600825C33 /* BannerModel.h */,
+				EA49444A2543D21600825C33 /* BannerModel.m */,
+				EA4944512543D9BE00825C33 /* V1_BannerModel.h */,
+				EA4944522543D9BE00825C33 /* V1_BannerModel.m */,
+				EA4944582544961D00825C33 /* WeChatChaptersModel.h */,
+				EA4944592544961D00825C33 /* WeChatChaptersModel.m */,
+				EA49445B2544964100825C33 /* WeChatChapters_V1Model.h */,
+				EA49445C2544964100825C33 /* WeChatChapters_V1Model.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EA49444C2543D2DA00825C33 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EA49444E2543D2EF00825C33 /* BaseModel.h */,
+				EA49444F2543D2EF00825C33 /* BaseModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EA49445425448DF400825C33 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				EA49445525448E0D00825C33 /* NetServiceTool.h */,
+				EA49445625448E0D00825C33 /* NetServiceTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		EA51A12E25344A030003A0CC /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				EA51A12F25344A030003A0CC /* BaseNavigationController */,
+				EA49444C2543D2DA00825C33 /* model */,
 				EA51A13225344A030003A0CC /* BaseTabBar.h */,
 				EA51A13625344A030003A0CC /* BaseTabBar.m */,
 				EA51A14325344B5F0003A0CC /* BaseViewController.h */,
@@ -218,6 +282,7 @@
 		EA65671E250D213E00F1C5D3 /* WanAndroid_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA49445425448DF400825C33 /* Tool */,
 				EA51A12E25344A030003A0CC /* Base */,
 				707509A0251F377B006C1AEA /* Utils */,
 				EAC0CA3A250E620900D80D3B /* CenterController */,
@@ -241,6 +306,8 @@
 		EAC0CA30250E5DA200D80D3B /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				EA4944482543D1E900825C33 /* model */,
+				EA47730A25419BA70024876F /* view */,
 				EAC0CA36250E608B00D80D3B /* Controller */,
 			);
 			path = MainController;
@@ -403,29 +470,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4944502543D2EF00825C33 /* BaseModel.m in Sources */,
+				EA49445A2544961D00825C33 /* WeChatChaptersModel.m in Sources */,
 				EA51A15625344BBA0003A0CC /* GTScreen.m in Sources */,
 				EA51A13A25344A030003A0CC /* BaseNavigationController+Extension.m in Sources */,
+				EA47730D25419BA70024876F /* BannerCell.m in Sources */,
 				EA51A13C25344A030003A0CC /* BaseNavigationController.m in Sources */,
 				EA51A13B25344A030003A0CC /* BaseViewController.m in Sources */,
 				EA51A15325344BBA0003A0CC /* UIView+BlockGesture.m in Sources */,
 				EA51A15225344BBA0003A0CC /* NSString+Calculation.m in Sources */,
+				EA49444B2543D21600825C33 /* BannerModel.m in Sources */,
 				EA51A15A253454C40003A0CC /* NSObject+NSCoding.m in Sources */,
 				EA656727250D213E00F1C5D3 /* ViewController.m in Sources */,
 				EA51A16F2534580A0003A0CC /* NSString+Encryption.m in Sources */,
 				EA51A15125344BBA0003A0CC /* UIColor+HEX.m in Sources */,
 				707509A3251F37A2006C1AEA /* GTNotifitionManager.m in Sources */,
+				EA49445725448E0D00825C33 /* NetServiceTool.m in Sources */,
 				EA51A14025344B080003A0CC /* BaseViewController.m in Sources */,
 				EAC0CA39250E60A000D80D3B /* MainViewController.m in Sources */,
 				EA51A13D25344A030003A0CC /* BaseTabBar.m in Sources */,
 				EA51A1702534580A0003A0CC /* NSAttributedString+Extension.m in Sources */,
 				EA656721250D213E00F1C5D3 /* AppDelegate.m in Sources */,
 				EA656732250D214100F1C5D3 /* main.m in Sources */,
+				EA4944532543D9BE00825C33 /* V1_BannerModel.m in Sources */,
 				EA51A13E25344A030003A0CC /* BaseTabBarController.m in Sources */,
 				EA51A16E2534580A0003A0CC /* NSString+Extension.m in Sources */,
 				EA51A15425344BBA0003A0CC /* UIFont+Extension.m in Sources */,
 				EA656724250D213E00F1C5D3 /* SceneDelegate.m in Sources */,
 				EA51A15525344BBA0003A0CC /* UIView+BorderLine.m in Sources */,
 				EAC0CA35250E607B00D80D3B /* GankViewController.m in Sources */,
+				EA49445D2544964100825C33 /* WeChatChapters_V1Model.m in Sources */,
 				EAC0CA3E250E622D00D80D3B /* CenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

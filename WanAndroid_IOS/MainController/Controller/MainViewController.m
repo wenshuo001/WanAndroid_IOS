@@ -14,15 +14,18 @@
 #import "MJRefresh.h"
 #import "BannerCell.h"
 #import "AFHTTPSessionManager.h"
- 
- 
+#import "GTScreen.h"
+#import "BannerModel.h"
+#import "WeChatChaptersModel.h"
+
 #import <objc/message.h>
- 
+
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 //页面内容table
 @property (nonatomic, strong) UITableView *newsTableView;
 
- 
+@property (nonatomic, strong) BannerModel *bannerModel;
+@property (nonatomic, strong) WeChatChaptersModel *weChatChaptersModel;
 @end
 
 @implementation MainViewController
@@ -36,27 +39,37 @@
     [GTNotifitionManager.notificationManager checkNotificationAuthorization];
     //   [self addLocalNotice];
     self.navigationController.jz_navigationBarHidden = true; //隐藏标题栏和状态栏
+    [self setupView];
     
+    NSArray *indexpaths = @[[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    [[AFHTTPSessionManager manager] GET:@"https://www.wanandroid.com/banner/json" parameters:nil  headers:nil  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.bannerModel = [BannerModel mj_objectWithKeyValues: responseObject];
+        [self.newsTableView reloadRowsAtIndexPaths:indexpaths withRowAnimation:UITableViewRowAnimationNone];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"");
+    }];
+    //公众号列表
     [[AFHTTPSessionManager manager] GET:@"https://wanandroid.com/wxarticle/chapters/json" parameters:nil  headers:nil  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.weChatChaptersModel = [WeChatChaptersModel mj_objectWithKeyValues: responseObject];
         NSLog(@"");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"");
     }];
-    [self setupView];
 }
 
 -(void) setupView{
     if (NSFoundationVersionNumber>=NSFoundationVersionNumber_iOS_8_0) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
-
+        
         self.extendedLayoutIncludesOpaqueBars = NO;
-
+        
         self.modalPresentationCapturesStatusBarAppearance = NO;
-
+        
         self.automaticallyAdjustsScrollViewInsets=NO;
     }
     //初始化TableView
-    UITableView *news = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    UITableView *news = [[UITableView alloc] initWithFrame:CGRectMake(0, -44, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     news.delegate = self;
     news.dataSource = self;
     news.backgroundColor = [UIColor whiteColor];
@@ -75,7 +88,7 @@
     //初始化上拉加载
     // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
     self.newsTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-         
+        
     }];
 }
 
@@ -96,19 +109,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0)
     {
-        return 200;
+        return countcoordinatesX(220);
     }
     return 100;
 }
 
 //设置 cell 视图
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-   
+    
     if (indexPath.row == 0)
     {
-       // AdsModel *model = [self.adsData objectAtIndex:0];
-        BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"banner"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        // AdsModel *model = [self.adsData objectAtIndex:0];
+        BannerCell *cell = [BannerCell cellWithTableview:tableView BannerModel:self.bannerModel];
+        
         return cell;
     }
     UITableViewCell * cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
@@ -119,7 +132,7 @@
     
     cell.textLabel.text = @"主标题";
     cell.detailTextLabel.text = @"副标题";
-
+    
     return cell;
 }
 

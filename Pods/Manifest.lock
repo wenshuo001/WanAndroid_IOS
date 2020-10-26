@@ -22,6 +22,7 @@ PODS:
     - IGListDiffKit (= 4.0.0)
   - JGProgressHUD (2.0.3)
   - JZNavigationExtension (2.1)
+  - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - IGListKit (~> 4.0.0)
   - JGProgressHUD (= 2.0.3)
   - JZNavigationExtension (= 2.1)
+  - MJExtension
   - MJRefresh
   - SDCycleScrollView
   - SDWebImage
@@ -47,6 +49,7 @@ SPEC REPOS:
     - IGListKit
     - JGProgressHUD
     - JZNavigationExtension
+    - MJExtension
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
@@ -58,10 +61,11 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   JZNavigationExtension: 45284fc63ba48a9e55b020656d39c86b01ff6a63
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: e3ac78fe5a2f7c5f54df4d39b0fe8c1c9dc8d4f5
+PODFILE CHECKSUM: f13b663b6d48783704b4b7e047ba6c4107cd1b05
 
 COCOAPODS: 1.10.0.beta.2
