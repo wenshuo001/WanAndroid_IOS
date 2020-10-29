@@ -9,5 +9,5 @@
 #import "V1_BannerModel.h"
 
 @implementation V1_BannerModel
-
+        
 @end

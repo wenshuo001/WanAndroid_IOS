@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)NSInteger parentChapterId;
 @property(nonatomic,copy)NSString * visible;
 @property (nonatomic, assign) BOOL userControlSetTop;
+
 @end
 
 NS_ASSUME_NONNULL_END

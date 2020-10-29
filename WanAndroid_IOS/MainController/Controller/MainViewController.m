@@ -17,6 +17,7 @@
 #import "GTScreen.h"
 #import "BannerModel.h"
 #import "WeChatChaptersModel.h"
+#import "PageCellTableViewCell.h"
 
 #import <objc/message.h>
 
@@ -26,6 +27,8 @@
 
 @property (nonatomic, strong) BannerModel *bannerModel;
 @property (nonatomic, strong) WeChatChaptersModel *weChatChaptersModel;
+
+@property(nonatomic, assign) NSUInteger pageCount; //分页数
 @end
 
 @implementation MainViewController
@@ -52,10 +55,18 @@
     //公众号列表
     [[AFHTTPSessionManager manager] GET:@"https://wanandroid.com/wxarticle/chapters/json" parameters:nil  headers:nil  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.weChatChaptersModel = [WeChatChaptersModel mj_objectWithKeyValues: responseObject];
+        _pageCount = self.weChatChaptersModel.data.count;
+        NSArray *indexpaths = @[[NSIndexPath indexPathForRow:1 inSection:0]];
+        [self.newsTableView reloadRowsAtIndexPaths:indexpaths withRowAnimation:UITableViewRowAnimationNone];
+        [self initPageView];
         NSLog(@"");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"");
     }];
+}
+
+-(void) initPageView{
+    
 }
 
 -(void) setupView{
@@ -111,6 +122,10 @@
     {
         return countcoordinatesX(220);
     }
+    if (indexPath.row == 1)
+    {
+        return countcoordinatesX(220);
+    }
     return 100;
 }
 
@@ -121,6 +136,12 @@
     {
         // AdsModel *model = [self.adsData objectAtIndex:0];
         BannerCell *cell = [BannerCell cellWithTableview:tableView BannerModel:self.bannerModel];
+        return cell;
+    }
+    if (indexPath.row == 1)
+    {
+        // AdsModel *model = [self.adsData objectAtIndex:0];
+        PageCellTableViewCell *cell = [PageCellTableViewCell cellWithTableview:tableView WeChatChaptersModel:self.weChatChaptersModel];
         
         return cell;
     }
